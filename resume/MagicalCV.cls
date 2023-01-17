@@ -45,7 +45,7 @@
 \RequirePackage{setspace}
 % Use icons from font-awesome
 \usepackage[default]{lato}
-\RequirePackage{fontawesome5}
+% \RequirePackage{fontawesome5}
 \RequirePackage{roboto}
 \RequirePackage[default,opentype]{sourcesanspro}
 % Needed for the photo ID
@@ -76,6 +76,7 @@
 \newcommand{\homepagesymbol}{\faChain}
 \newcommand{\locationsymbol}{\faMapMarker}
 \newcommand{\linkedinsymbol}{\faLinkedin}
+\newcommand{\linuxsymbol}{\faLinux}
 \newcommand{\twittersymbol}{\faTwitter}
 \newcommand{\githubsymbol}{\faGithub}
 \newcommand{\orcidsymbol}{\aiOrcid}
@@ -92,6 +93,7 @@
 \newcommand{\homepage}[1]{\printinfo{\homepagesymbol}{#1}}
 \newcommand{\twitter}[1]{\printinfo{\twittersymbol}{#1}}
 \newcommand{\linkedin}[1]{\printinfo{\linkedinsymbol}{#1}}
+\newcommand{\linux}[1]{\printinfo{\linuxsymbol}{#1}}
 \newcommand{\github}[1]{\printinfo{\githubsymbol}{#1}}
 \newcommand{\orcid}[1]{\printinfo{\orcidsymbol}{#1}}
 \newcommand{\location}[1]{\printinfo{\locationsymbol}{#1}}
@@ -299,7 +301,7 @@
 
 % Set main fonts
 \setmainfont[Color=primary, Path = fonts/lato/,BoldItalicFont=Lato-RegIta,BoldFont=Lato-Reg,ItalicFont=Lato-LigIta]{Lato-Lig}
-\setsansfont[Scale=MatchLowercase,Mapping=tex-text, Path = fonts/raleway/]{Raleway-ExtraLight}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX, Path = fonts/raleway/]{Raleway-ExtraLight}
 
 % Date command
 \setlength{\TPHorizModule}{1mm}
