@@ -27,6 +27,12 @@
 \usepackage[UKenglish]{isodate}
 % Title styles
 \usepackage{titlesec}
+
+% fancy hdr
+\usepackage{fancyhdr}
+% hanging
+\usepackage{hanging}
+
 % Make fixed length table
 \RequirePackage{array}
 % Handle list environment
