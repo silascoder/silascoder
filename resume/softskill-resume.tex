@@ -1,0 +1,201 @@
+\documentclass[a4paper]{MagicalCV}
+
+% Removing page numbers
+\pagestyle{fancy}
+\fancyhf{}
+
+
+% Change the geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Defining your colors
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+%
+\setcounter{secnumdepth}{3}
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-purple}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+% start document
+\begin{document}
+
+% Last update time
+\lastupdated
+
+% Title name
+\namesection{Noam}{Miller}{
+\phone{609-955-4915} \email{\href{mailto:noammiller99@gmail.com}{noammiller99@gmail.com}}}
+
+% Column one
+\begin{minipage}[t]{0.33\textwidth} 
+
+% Education
+\cvsection{Education} 
+
+\subsection{Princeton University}
+\descript{A. B. German, \textit{magna cum laude}}
+\cvevent{May 2022}{Princeton, NJ} 
+\vspace{\topsep}
+\begin{tightemize}
+\item 3.9 GPA, Minor in CS
+\item Allen G. Shenstone Prize in Physics (May 2019)
+\item Mary Cunningham Prize in German (Sept 2020)
+\item Victor Lange Senior Thesis Prize (May 2022)
+\end{tightemize}
+\hspace{0.3cm}
+
+
+\subsection{Boston Psychoanalytic Society and Institute}
+\descript{Community Partner}
+\cvevent{October 2022}{Newton, MA}
+\vspace{\topsep}
+\begin{tightemize}
+\item Attend lectures on psychoanalysis
+\item Also enrolled at Massachusetts Institute for Psychoanalysis
+\end{tightemize}
+\sectionsep
+
+% Links
+\cvsection{Links}
+
+\github{Old GitHub} \href{https://github.com/noammiller}{\bf noammiller}
+\github{Current GitHub} \href{https://github.com/silascoder}{\bf silascoder} \\
+\linux{Debian Salsa} \href{https://salsa.debian.org/silascoder}{\bf silascoder} \\
+\linkedin{Linkedin} \href{https://www.linkedin.com/in/noam-miller-8853a4154}{\bf Noam Miller}
+\sectionsep
+
+% Coursework
+\cvsection{Coursework} \\
+\textbf{Computer Science:} \\
+Algorithms and Data Structures \\
+Introduction to Programming Systems \\
+Functional Programming \\
+Information Security \\
+Natural Language Processing \\
+
+\textbf{Physics:} \\
+Integrated Science Curriculum (Biophysics) \\
+Classical Mechanics \\
+Quantum Mechanics \\
+
+\textbf{Senior Thesis:} \\
+\textit{Wissenschaftlichkeit} in Freud: \\
+Scientific Reduction and the Ghost of the \textit{Entwurf}
+\sectionsep
+
+% Skills
+\cvsection{Skills}
+
+\subsection{Programming}
+Python \textbullet{} Java \textbullet{} C \textbullet{} OCaml \textbullet{} MATLAB
+\sectionsep
+
+% \subsection{Languages}
+% German (proficient) \textbullet{} Spanish (reading)
+% \sectionsep
+
+\subsection{Miscellaneous}
+GNU/Linux \textbullet{} Shell \textbullet{} \LaTeX \textbullet{} Git
+\sectionsep
+
+% Column two
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+% Experience
+\cvsection{Experience}
+
+% \runsubsection{Research Assistant} \\
+% \descript{Professor Michael Jennings | Princeton University}
+% \cvevent{June 2020 – Aug 2020}{Princeton, NJ} 
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+% \begin{tightemize}
+% \item Summarized and catalogued TV produced by German author and director Alexander Kluge
+% \end{tightemize}
+% \sectionsep
+
+\runsubsection{Debian Sponsored Maintainer} \\
+\descript{OCaml Task Force | Debian}
+\cvevent{December 2022 – ongoing}{remote} 
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Adapt upstream OCaml packages for Debian distribution
+\item Identify and address bugs, maintain and build packages
+\item Communicate with international team of remote developers
+\item Self-study \textit{The Linux Programming Interface} by Michael Kerrisk
+\end{tightemize}
+\sectionsep
+
+\runsubsection{STEM Tutor} \\
+\descript{High School and College-level Tutor}
+\cvevent{Sept 2018 – ongoing}{Boston, MA} 
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Integrated Science Curriculum tutor at Princeton (9/18 - 6/20)
+\item Algorithms and Data Structures tutor (9/19 - 6/22)
+\item Help incarcerated students at Petey Greene Program (1/20 - 6/22)
+\item Princeton Tutoring, Wyzant, and Ivy Squared (10/21 - ongoing)
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Legal Research Assistant} \\
+\descript{Professor Eric Talley | Columbia Law School}
+\cvevent{June 2020 – Aug 2020}{New York, NY} 
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Parsed corporate SEC filings to track changes in \textit{Force majeure} language in corporate charters in the wake of the 2008 recession and the Covid-19 pandemic
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Research Assistant} \\
+\descript{Romanczuk Lab | Humboldt University}
+\cvevent{July 2019 – Aug 2019}{Berlin, Germany} 
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Developed pipeline for analyzing fish movement using neural networks
+\item Developed novel analytic technique to identify low-resolution artifacts in the data
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Research Assistant} \\
+\descript{Norman Lab | Princeton University}
+\cvevent{May 2018 – May 2019}{Princeton, NJ} 
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Developed Python library adaptation of the LEABRA algorithm for modeling of biological neural networks
+\item Worked with Git, Codecov, and other tools to ensure stable release of Python library
+\end{tightemize}
+
+% Competitions
+\cvsection{Other Activities}
+
+\runsubsection{Cross Country Bike Trip} \\
+\descript{Organizer and Participant}
+\cvevent{June 2021 - Aug 2021}{USA} 
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+Completed shorter trips: New Jersey $\longleftrightarrow$ Connecticut, New Jersey $\rightarrow$ Ohio
+
+% Recent Projects
+\cvsection{Publications and Projects} \\
+\begin{hangparas}{2em}{1}
+“Leabra7: a Python package for modeling recurrent, biologically-realistic neural networks” Greenidge, C. D., Miller, N., \& Norman, K. (2018). \textit{arXiv}. \\
+“Exploring the Performance of DINOs (Datasets from Instructions) generated from pretrained language models" Lam, K., Miller, N. \& Weisberg, D. (2022). COS 484 Final Project.
+\end{hangparas}
+\end{minipage} 
+\end{document}  
