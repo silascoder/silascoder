@@ -1,4 +1,3 @@
-resume/resume.aux
-resume/resume.log
-resume/resume.out
-resume/Makefile
+resume/*.aux
+resume/*.log
+resume/*.out
