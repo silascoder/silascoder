@@ -27,7 +27,8 @@
 \titleformat{\section}{\scshape\LARGE\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{%\bigskipamount
 }{\smallskipamount}
-\newcommand{\heading}[1]{\centering{\sffamily\Huge #1}}
+\newcommand\myfontsize{\fontsize{35pt}{35pt}\selectfont}
+\newcommand{\heading}[1]{\centering{\sffamily\myfontsize #1}}
 \newcommand{\entry}[4]{{{\textbf{#1}}} \hfill #3 \\ #2 \hfill #4}
 \newcommand{\tableentry}[3]{\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
 
@@ -37,9 +38,9 @@
 
 \begin{paracol}{2}
 % Name & headline
+\vspace*{1cm}
 \heading{Noam Miller}
-
-\smallskip
+\bigskip
 
 % Identity card
 \vspace{0.01\textheight}
@@ -116,7 +117,7 @@
 \entry{OCaml Task Force}{Volunteer Sponsored Maintainer}{remote}{Dec 2022 -- ongoing}
 \begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
   \item Fix bugs, maintain and build packages for Debian distribution
-  \item Read all of \textit{The Linux Programming Interface} by Michael Kerrisk
+  \item Worked through \textit{The Linux Programming Interface} by Michael Kerrisk
 \end{itemize}
 
 \smallskip
