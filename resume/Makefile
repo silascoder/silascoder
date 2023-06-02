@@ -6,5 +6,5 @@ coding-resume.pdf: coding-resume.tex MagicalCV.cls
 softskill-resume.pdf: softskill-resume.tex MagicalCV.cls
 	lualatex softskill-resume.tex
 
-clean: *.aux *.log *.out
-	rm *.aux *.log *.out
+clean:
+	rm -rf *.aux *.log *.out *.gz
