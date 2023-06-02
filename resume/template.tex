@@ -14,8 +14,8 @@
 \hypersetup{colorlinks, urlcolor=black, linkcolor=black}
 
 % Geometry
-\geometry{hmargin=1.75cm, vmargin=1cm}
-\columnratio{0.65, 0.35}
+\geometry{hmargin=1cm, vmargin=1cm}
+\columnratio{0.35, 0.65}
 \setlength\columnsep{0.05\textwidth}
 \setlength\parindent{0pt}
 \setlength{\smallskipamount}{8pt plus 3pt minus 3pt}
@@ -25,25 +25,26 @@
 % Style
 \pagestyle{empty}
 \titleformat{\section}{\scshape\LARGE\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{\bigskipamount}{\smallskipamount}
-\newcommand{\heading}[2]{\centering{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
+\titlespacing{\section}{0pt}{%\bigskipamount
+}{\smallskipamount}
+\newcommand{\heading}[1]{\centering{\sffamily\Huge #1}}
 \newcommand{\entry}[4]{{{\textbf{#1}}} \hfill #3 \\ #2 \hfill #4}
 \newcommand{\tableentry}[3]{\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
 
 \begin{document}
 
-\vspace*{\fill}
+%\vspace*{\fill}
 
 \begin{paracol}{2}
-
 % Name & headline
-\heading{Noam Miller}{Statement of purpose}
+\heading{Noam Miller}
 
-\switchcolumn
+\smallskip
 
 % Identity card
 \vspace{0.01\textheight}
 \begin{supertabular}{ll}
+  \footnotesize\faIcon{map-pin} & Somerville, MA \\
   \footnotesize\faPhone & +1 609 955 4915 \\
   \footnotesize\faEnvelope & \href{mailto:noammiller99@gmail.com}{noammiller99@gmail.com}  \\
   \footnotesize\faIcon{github} & Old GitHub: \href{https://www.github.com/noammiller}{noammiller} \\
@@ -51,7 +52,7 @@
     \footnotesize\faIcon{linux} & Salsa: \href{https://www.salsa.debian.org/silascoder}{silascoder} \\
 \end{supertabular}
 
-\switchcolumn*
+\switchcolumn
 
 \section{education}
 
@@ -61,37 +62,54 @@
   \item Allen G. Shenstone Prize in Physics (May 2019)
   \item Mary Cunningham Prize in German (Sept 2020)
   \item Victor Lange Senior Thesis Prize (May 2022)
-  \begin{itemize}
-  \item \textit{Wissenschaftlichkeit} in Freud: Scientific Reduction and the Ghost of the \textit{Entwurf}
-  \end{itemize}
 \end{itemize}
+
+\smallskip
 
 \entry{Boston Psychoanalytic Society and Institute}{Community Partner}{Newton, MA}{2022 -- ongoing}
 \begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
   \item Attend lectures and classes in psychoanalysis
-  \item Also enrolled at Massachusetts Institute of Psychocanalysis
+  \item Also enrolled at Massachusetts Institute of Psychoanalysis
 \end{itemize}
 
 
-\switchcolumn
-
-\section{clubs}
-\begin{supertabular}{rl}
-  \tableentry{Clubs}{Students for Prison}{}
-  \tableentry{}{Education and Reform}{spaceafter}
-  \tableentry{}{Princeton Progressive}{}
-  \tableentry{}{Foundations Magazine}{spaceafter}
-\end{supertabular}
+\switchcolumn*
 
 \section{skills}
 \begin{supertabular}{rl}
   \tableentry{\footnotesize\faCode}{Python \textperiodcentered{} Java \textperiodcentered{} C \textperiodcentered{} OCaml}{}
   \tableentry{}{GNU/Linux \textperiodcentered{} Git \textperiodcentered{} ML}{}
-  \tableentry{}{}{}
-  \tableentry{}{German \textperiodcentered{} advanced}{}
+  \tableentry{\footnotesize\faIcon{globe}}{German \textperiodcentered{} advanced}{}
   \tableentry{}{Spanish \textperiodcentered{} advanced}{}
 \end{supertabular}
-\switchcolumn*
+
+\smallskip
+
+\section{clubs}
+\begin{supertabular}{rl}
+  \tableentry{Group Lead}{Students for Prison}{}
+  \tableentry{}{Education and Reform}{spaceafter}
+  \tableentry{Editor}{Princeton Progressive}{}
+  \tableentry{Treasurer}{Foundations Magazine}{spaceafter}
+\end{supertabular}
+
+\smallskip
+\section{publications}
+\begin{supertabular}{rl}
+  \tableentry{thesis}{Wissenschaftlichkeit \textit{in Freud:}}{}
+  \tableentry{}{\textit{Scientific Reduction and}}{}
+  \tableentry{}{\textit{the Ghost of the} Entwurf}{}
+  \tableentry{}{}{}
+  \tableentry{2018}{\textit{Leabra7: a Python package}}{}
+  \tableentry{}{\textit{for modeling recurrent,}}{}
+  \tableentry{}{\textit{biologically-realistic}}{}
+  \tableentry{}{\textit{neural networks}}{}
+  \tableentry{}{Greenidge, C. D., Miller,N.,}{}
+  \tableentry{}{\& Norman, K.}{}
+
+\end{supertabular}
+
+\switchcolumn
 
 \section{experience}
 
@@ -101,7 +119,7 @@
   \item Read all of \textit{The Linux Programming Interface} by Michael Kerrisk
 \end{itemize}
 
-\medskip
+\smallskip
 
 \entry{Freelance}{STEM Tutor}{remote}{Sept 2018 -- ongoing}
 \begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
@@ -109,24 +127,30 @@
   \item Volunteered Petey Greene Program for incarcerated students
 \end{itemize}
 
-\medskip
+\smallskip
 
 \entry{Columbia Law School}{Legal Research Assistant}{New York, NY}{June 2020 -- Aug 2020}
 \begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
-  \item Analyzed SEC filings to track changes in \textit{Force majeure} language in corporate charters in the wave of the 2008 recession and the Covid-19 pandemic
+  \item Analyzed SEC filings to track changes in corporate charters relating to in \textit{force majeure} in light of the 2008 recession and the Covid-19 pandemic
 \end{itemize}
 
-\switchcolumn
+\smallskip
 
-\section{Publications}
-\begin{supertabular}{rl}
-  \tableentry{2018}{"Leabra7: a Python package}{}
-  \tableentry{}{for modeling recurrent,}{}
-  \tableentry{}{biologically-realistic}{}
-  \tableentry{}{neural networks"}{}
-  \tableentry{}{Greenidge, C. D., Miller,N.,}{}
-  \tableentry{}{\& Norman, K.}{}
-\end{supertabular}
+\entry{Humboldt University}{Research Assistant}{Berlin, Germany}{July 2019 -- Aug 2019}
+\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+  \item Developed pipeline for analyzing fish movement using neural
+networks
+  \item Developed novel analytic technique to identify low-resolution artifacts in the data
+\end{itemize}
+
+\smallskip
+
+\entry{Princeton University}{Research Assistant}{Princeton, NJ}{May 2018 -- May 2019}
+\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+  \item Developed Python library adaptation of the LEABRA algorithm for modeling of biological neural networks
+  \item Worked with Git, Codecov, and other tools to ensure stable release of Python library
+\end{itemize}
+
 
 \end{paracol}
 
