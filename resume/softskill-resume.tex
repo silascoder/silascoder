@@ -1,201 +1,158 @@
-\documentclass[a4paper]{MagicalCV}
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage{cmbright}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage[sf]{libertine}
+\usepackage{microtype}
+\usepackage{paracol}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\hypersetup{colorlinks, urlcolor=black, linkcolor=black}
 
-% Removing page numbers
-\pagestyle{fancy}
-\fancyhf{}
+% Geometry
+\geometry{hmargin=1cm, vmargin=1cm}
+\columnratio{0.35, 0.65}
+\setlength\columnsep{0.05\textwidth}
+\setlength\parindent{0pt}
+\setlength{\smallskipamount}{8pt plus 3pt minus 3pt}
+\setlength{\medskipamount}{16pt plus 6pt minus 6pt}
+\setlength{\bigskipamount}{24pt plus 8pt minus 8pt}
 
+% Style
+\pagestyle{empty}
+\titleformat{\section}{\scshape\LARGE\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{%\bigskipamount
+}{\smallskipamount}
+\newcommand\myfontsize{\fontsize{35pt}{35pt}\selectfont}
+\newcommand{\heading}[1]{\centering{\sffamily\myfontsize #1}}
+\newcommand{\entry}[4]{{{\textbf{#1}}} \hfill #3 \\ #2 \hfill #4}
+\newcommand{\tableentry}[3]{\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
 
-% Change the geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
-
-% Defining your colors
-\definecolor{VividPurple}{HTML}{3E0097}
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
-\colorlet{heading}{VividPurple}
-\colorlet{accent}{VividPurple}
-\colorlet{emphasis}{SlateGrey}
-\colorlet{body}{LightGrey}
-
-%
-\setcounter{secnumdepth}{3}
-
-% Color for highlights
-% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
-%                 awesome-nephritis, awesome-concrete, awesome-darknight
-\colorlet{awesome}{awesome-purple}
-
-% Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{true}
-
-% If you would like to change the social information separator from a pipe (|) to something else
-\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-
-% start document
 \begin{document}
 
-% Last update time
-\lastupdated
+%\vspace*{\fill}
 
-% Title name
-\namesection{Noam}{Miller}{
-\phone{609-955-4915} \email{\href{mailto:noammiller99@gmail.com}{noammiller99@gmail.com}}}
+\begin{paracol}{2}
+% Name & headline
+\vspace*{-0.1cm}
+\heading{Noam Miller}
+\vspace*{0.8cm}
 
-% Column one
-\begin{minipage}[t]{0.33\textwidth} 
+% Identity card
+\vspace{0.01\textheight}
+\begin{supertabular}{ll}
+  \footnotesize\faIcon{map-pin} & Somerville, MA \\
+  \footnotesize\faPhone & +1 609 955 4915 \\
+  \footnotesize\faEnvelope & \href{mailto:noammiller99@gmail.com}{noammiller99@gmail.com}  \\
+  \footnotesize\faIcon{github} & Old GitHub: \href{https://www.github.com/noammiller}{noammiller} \\
+  \footnotesize\faIcon{github} & Current GitHub: \href{https://www.github.com/silascoder}{silascoder} \\
+    \footnotesize\faIcon{linux} & Salsa: \href{https://www.salsa.debian.org/silascoder}{silascoder} \\
+\end{supertabular}
 
-% Education
-\cvsection{Education} 
+\switchcolumn
 
-\subsection{Princeton University}
-\descript{A. B. German, \textit{magna cum laude}}
-\cvevent{May 2022}{Princeton, NJ} 
-\vspace{\topsep}
-\begin{tightemize}
-\item 3.9 GPA, Minor in CS
-\item Allen G. Shenstone Prize in Physics (May 2019)
-\item Mary Cunningham Prize in German (Sept 2020)
-\item Victor Lange Senior Thesis Prize (May 2022)
-\end{tightemize}
-\hspace{0.3cm}
+\section{education}
+
+\entry{Princeton University}{A.B. German, \textit{magna cum laude}}{Princeton, NJ}{2017 -- 2022}
+\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+  \item 3.9 GPA, Minor in Computer Science
+  \item Allen G. Shenstone Prize in Physics (May 2019)
+  \item Mary Cunningham Prize in German (Sept 2020)
+  \item Victor Lange Senior Thesis Prize (May 2022)
+\end{itemize}
+
+\smallskip
+
+\entry{Boston Psychoanalytic Society and Institute}{Community Partner}{Newton, MA}{2022 -- ongoing}
+\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+  \item Attend lectures and classes in psychoanalysis
+  \item Also enrolled at Massachusetts Institute of Psychoanalysis
+\end{itemize}
 
 
-\subsection{Boston Psychoanalytic Society and Institute}
-\descript{Community Partner}
-\cvevent{October 2023}{Newton, MA}
-\vspace{\topsep}
-\begin{tightemize}
-\item Attend lectures on psychoanalysis
-\item Also enrolled at Massachusetts Institute for Psychoanalysis
-\end{tightemize}
-\sectionsep
+\switchcolumn*
 
-% Links
-\cvsection{Links}
+\section{skills}
+\begin{supertabular}{rl}
+  \tableentry{\footnotesize\faCode}{Python \textperiodcentered{} Java \textperiodcentered{} C \textperiodcentered{} OCaml}{}
+  \tableentry{}{GNU/Linux \textperiodcentered{} Git \textperiodcentered{} ML}{}
+  \tableentry{\footnotesize\faIcon{globe}}{German \textperiodcentered{} advanced}{}
+  \tableentry{}{Spanish \textperiodcentered{} advanced}{}
+\end{supertabular}
 
-\github{Old GitHub} \href{https://github.com/noammiller}{\bf noammiller}
-\github{Current GitHub} \href{https://github.com/silascoder}{\bf silascoder} \\
-\linux{Debian Salsa} \href{https://salsa.debian.org/silascoder}{\bf silascoder} \\
-\linkedin{Linkedin} \href{https://www.linkedin.com/in/noam-miller-8853a4154}{\bf Noam Miller}
-\sectionsep
+\smallskip
 
-% Coursework
-\cvsection{Outside of Class} \\
-\textbf{Clubs:} \\
-Students for Prison Education and Reform (SPEAR)\\
-Princeton Progressive (editor, writer)\\
-Foundations Magazine (editor, treasurer)\\
+\section{extracurricular}
+\begin{supertabular}{rl}
+  \tableentry{Group Lead}{Students for Prison}{}
+  \tableentry{}{Education and Reform}{spaceafter}
+  \tableentry{Editor}{Princeton Progressive}{}
+  \tableentry{Treasurer}{Foundations Magazine}{spaceafter}
+\end{supertabular}
 
-\textbf{Junior Paper:} \\
-German Anthropology: A Kantian Past and a Herderian Future \\
+\smallskip
+\section{publications}
+\begin{supertabular}{rl}
+  \tableentry{thesis}{Wissenschaftlichkeit \textit{in Freud:}}{}
+  \tableentry{}{\textit{Scientific Reduction and}}{}
+  \tableentry{}{\textit{the Ghost of the} Entwurf}{}
+  \tableentry{}{}{}
+  \tableentry{2018}{\textit{Leabra7: a Python package}}{}
+  \tableentry{}{\textit{for modeling recurrent,}}{}
+  \tableentry{}{\textit{biologically-realistic}}{}
+  \tableentry{}{\textit{neural networks}}{}
+  \tableentry{}{Greenidge, C. D., Miller, N.,}{}
+  \tableentry{}{\& Norman, K.}{}
 
-\textbf{Senior Thesis:} \\
-\textit{Wissenschaftlichkeit} in Freud: \\
-Scientific Reduction and the Ghost of the \textit{Entwurf}
-\sectionsep
+\end{supertabular}
 
-% Skills
-\cvsection{Skills}
+\switchcolumn
 
-\subsection{Communication}
-Reading \textbullet{} Editing \textbullet{} Translation\\
-\sectionsep
+\section{experience}
 
-\subsection{Programming}
-Python \textbullet{} Java \textbullet{} C \textbullet{} OCaml \textbullet{} MATLAB
-\sectionsep
+\entry{OCaml Task Force}{Volunteer Sponsored Maintainer}{remote}{Dec 2022 -- ongoing}
+\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+  \item Fix bugs, maintain and build packages for Debian distribution
+  \item Worked through \textit{The Linux Programming Interface} by Michael Kerrisk
+\end{itemize}
 
-% \subsection{Languages}
-% German (proficient) \textbullet{} Spanish (reading)
-% \sectionsep
+\smallskip
 
-\subsection{Languages}
-German (reading) \textbullet{} Spanish (reading)
-\sectionsep
+\entry{Freelance}{STEM Tutor}{remote}{Sept 2018 -- ongoing}
+\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+  \item Tutored for Princeton University, Princeton Tutoring, Wyzant
+  \item Volunteered Petey Greene Program for incarcerated students
+\end{itemize}
 
-% Column two
-\end{minipage} 
-\hfill
-\begin{minipage}[t]{0.66\textwidth} 
+\smallskip
 
-% Experience
-\cvsection{Experience}
+\entry{Columbia Law School}{Legal Research Assistant}{New York, NY}{June 2020 -- Aug 2020}
+\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+  \item Analyzed SEC filings to track changes in corporate charters relating to \textit{force majeure} in light of the 2008 recession and the Covid-19 pandemic
+\end{itemize}
 
-% \runsubsection{Research Assistant} \\
-% \descript{Professor Michael Jennings | Princeton University}
-% \cvevent{June 2020 – Aug 2020}{Princeton, NJ} 
-% \vspace{\topsep} % Hacky fix for awkward extra vertical space
-% \begin{tightemize}
-% \item Summarized and catalogued TV produced by German author and director Alexander Kluge
-% \end{tightemize}
-% \sectionsep
+\smallskip
 
-\runsubsection{Volunteer Sponsored Maintainer} \\
-\descript{OCaml Task Force | Debian}
-\cvevent{December 2022 – ongoing}{remote} 
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightemize}
-\item Learning how to address bugs, maintain and build OCaml packages packages for Debian distribution
-\item Communicate with international team of remote developers
-\item It's been a slow start given the current freeze of the pending Debian release (June 2023)
-\item Read all of \textit{The Linux Programming Interface} by Michael Kerrisk
-\end{tightemize}
-\sectionsep
+\entry{Humboldt University}{Research Assistant}{Berlin, Germany}{July 2019 -- Aug 2019}
+\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+  \item Analyzed fish movement using neural
+networks
+  \item Invented technique to identify low-resolution artifacts in the data
+\end{itemize}
 
-\runsubsection{STEM Tutor} \\
-\descript{High School and College-level Tutor}
-\cvevent{Sept 2018 – ongoing}{Boston, MA} 
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightemize}
-\item Integrated Science Curriculum tutor at Princeton (9/18 - 6/20)
-\item Algorithms and Data Structures tutor (9/19 - 6/22)
-\item Help incarcerated students at Petey Greene Program (1/20 - 6/22)
-\item Princeton Tutoring, Wyzant, and Ivy Squared (10/21 - ongoing)
-\end{tightemize}
-\sectionsep
+\smallskip
 
-\runsubsection{Legal Research Assistant} \\
-\descript{Professor Eric Talley | Columbia Law School}
-\cvevent{June 2020 – Aug 2020}{New York, NY} 
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightemize}
-\item Parsed corporate SEC filings to track changes in \textit{Force majeure} language in corporate charters in the wake of the 2008 recession and the Covid-19 pandemic
-\end{tightemize}
-\sectionsep
+\entry{Princeton University}{Research Assistant}{Princeton, NJ}{May 2018 -- May 2019}
+\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+  \item Developed Python library adaptation of the LEABRA algorithm for modeling of biological neural networks
+  \item Worked with Git, Codecov, and other tools to ensure stable release of Python library
+\end{itemize}
 
-\runsubsection{Research Assistant} \\
-\descript{Romanczuk Lab | Humboldt University}
-\cvevent{July 2019 – Aug 2019}{Berlin, Germany} 
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightemize}
-\item Developed pipeline for analyzing fish movement using neural networks
-\item Developed novel analytic technique to identify low-resolution artifacts in the data
-\end{tightemize}
-\sectionsep
 
-\runsubsection{Research Assistant} \\
-\descript{Norman Lab | Princeton University}
-\cvevent{May 2018 – May 2019}{Princeton, NJ} 
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightemize}
-\item Developed Python library adaptation of the LEABRA algorithm for modeling of biological neural networks
-\item Worked with Git, Codecov, and other tools to ensure stable release of Python library
-\end{tightemize}
+\end{paracol}
 
-% Competitions
-\cvsection{Other Activities}
-
-\runsubsection{Cross Country Bike Trip} \\
-\descript{Organizer and Participant}
-\cvevent{June 2021 - Aug 2021}{USA} 
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
-Completed shorter trips: New Jersey $\longleftrightarrow$ Connecticut, New Jersey $\rightarrow$ Ohio
-
-% Recent Projects
-\cvsection{Publications and Projects} \\
-\begin{hangparas}{2em}{1}
-“Leabra7: a Python package for modeling recurrent, biologically-realistic neural networks” Greenidge, C. D., Miller, N., \& Norman, K. (2018). \textit{arXiv}. \\
-“Exploring the Performance of DINOs (Datasets from Instructions) generated from pretrained language models" Lam, K., Miller, N. \& Weisberg, D. (2022). COS 484 Final Project.
-\end{hangparas}
-\end{minipage} 
-\end{document}  
+\end{document}
